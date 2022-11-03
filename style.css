@@ -31,10 +31,14 @@ Body Copy
 
     --row-border-radius : 8px;
 }
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
 p,
 h1,
-h2,
-h3 {
+h2 {
     font-family: inherit;
     color: white;
 }
@@ -48,7 +52,7 @@ h3 {
 }
 .cat-row {
     display: flex;
-    width: 800px;
+    width: 950px;
     border-radius: 20px;
 }
 .sedan{
@@ -65,11 +69,10 @@ h3 {
     border-top-right-radius: var(--row-border-radius);
 }
 .cat-card{
-    padding: 4%;
+    padding: 6%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 .cat-card > img {
     width: 60px;
@@ -78,23 +81,47 @@ h3 {
     font-size: 38px;
     font-family: 'Big Shoulders Display', cursive;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 .cat-disc{
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.7;
     color: var(--transparent-white);
+    margin-bottom: 75px;
 }
 .cat-button{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
     width: fit-content;
-    padding: 6% 18%;
+    padding: 8% 18%;
     border: none;
     border-radius: 32px;
     cursor: pointer;
-    color: ;
+}
+.btn-sedan{
+    color: var(--primary-orange);
+}
+.btn-suv {
+    color: var(--primary-dark-cyan);
+}
+.btn-luxury{
+    color: var(--primary-darker-cyan);
 }
 @media only screen and (max-width:650px) {
+    .container {
+        height: fit-content;
+    }
     .cat-row {
+        height: fit-content;
+        width: 100%;
         flex-direction: column;
+    }
+    .cat-card{
+        margin: 0 10%;
+        padding: 12%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
