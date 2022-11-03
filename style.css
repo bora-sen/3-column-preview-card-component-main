@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/*
+NOTES:
+
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+
+The designs were created to the following widths:
+    - Mobile: 375px
+    - Desktop: 1440px
+
+Colors:
+    Primary
+        Bright orange: hsl(31, 77%, 52%)
+        Dark cyan: hsl(184, 100%, 22%)
+        Very dark cyan: hsl(179, 100%, 13%)
+    Neutral
+        Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+        Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+Body Copy
+    - Font size: 15px
+*/
+
+:root {
+    --primary-orange :hsl(31, 77%, 52%);
+    --primary-dark-cyan :hsl(184, 100%, 22%);
+    --primary-darker-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-grey: hsl(0, 0%, 95%);
+
+    --row-border-radius : 8px;
+}
+p,
+h1,
+h2,
+h3 {
+    font-family: inherit;
+    color: white;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cat-row {
+    display: flex;
+    width: 800px;
+    border-radius: 20px;
+}
+.sedan{
+    background-color: var(--primary-orange);
+    border-bottom-left-radius: var(--row-border-radius);
+    border-top-left-radius: var(--row-border-radius);
+}
+.suv{
+    background-color: var(--primary-dark-cyan);
+}
+.luxury{
+    background-color: var(--primary-darker-cyan);
+    border-bottom-right-radius: var(--row-border-radius);
+    border-top-right-radius: var(--row-border-radius);
+}
+.cat-card{
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.cat-card > img {
+    width: 60px;
+}
+.cat-header{
+    font-size: 38px;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+.cat-disc{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--transparent-white);
+}
+.cat-button{
+    width: fit-content;
+    padding: 6% 18%;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    color: ;
+}
+@media only screen and (max-width:650px) {
+    .cat-row {
+        flex-direction: column;
+    }
+}
